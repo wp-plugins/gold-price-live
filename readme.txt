@@ -57,7 +57,7 @@ Looking for the paid version of this plugin? Visit www.gold-feed.com
 
 = Where can I place the Gold Feed Live shortcode? =
 
-In Pages, Posts, Widgets and RSS Feed > Shortcode Exec PHP
+In Pages, Posts, Widgets and RSS Feeds
 
 = What happens when I disable Gold Feed Live? =
 
@@ -77,7 +77,7 @@ Only the administrator of the blog or website.
 
 == Changelog ==
 
-= 1.00 =
+= 1.10 =
 * Official Gold Price Live plugin release.
 
 = 1.10 =
@@ -87,6 +87,9 @@ Only the administrator of the blog or website.
 
 = 1.00 =
 One kick but plugin added to the WP plugin directory.
+
+= 1.10 =
+Added button to WYSIWYG editor fixed install bug.
 
 == Acknowledgments ==
 
