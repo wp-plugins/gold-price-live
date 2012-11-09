@@ -80,6 +80,9 @@ Only the administrator of the blog or website.
 = 1.00 =
 * Official Gold Price Live plugin release.
 
+= 1.10 =
+* Fixed install bug and added button to WYSIWYG editor.
+
 == Upgrade Notice ==
 
 = 1.00 =
