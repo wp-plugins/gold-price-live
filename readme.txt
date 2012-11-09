@@ -77,19 +77,19 @@ Only the administrator of the blog or website.
 
 == Changelog ==
 
-= 1.00 =
-* Official Gold Price Live plugin release.
-
 = 1.10 =
 * Fixed install bug and added button to WYSIWYG editor.
 
-== Upgrade Notice ==
-
 = 1.00 =
-One kick but plugin added to the WP plugin directory.
+* Official Gold Price Live plugin release.
+
+== Upgrade Notice ==
 
 = 1.10 =
 Added button to WYSIWYG editor and fixed install bug.
+
+= 1.00 =
+One kick but plugin added to the WP plugin directory.
 
 == Acknowledgments ==
 
