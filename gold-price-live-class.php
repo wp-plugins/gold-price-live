@@ -1,8 +1,8 @@
 <?php
 
 /*
-	Support class Gold Price Live
-	Copyright (c) 2012 by Gold Feed Inc.
+	Support class Shortcode Exec PHP Plugin
+	Copyright (c) 2010, 2011, 2012 by Marcel Bokhorst
 */
 
 if (!function_exists('is_plugin_active_for_network'))
@@ -175,7 +175,7 @@ if (!class_exists('WPShortcodeExecPHP')) {
 
 				// Enqueue scripts
 				wp_enqueue_script('jquery');
-				wp_enqueue_script('simplemodal', $this->plugin_url . '/simplemodal/js/jquery.simplemodal.js');
+				wp_enqueue_script('editarea', $this->plugin_url . '/editarea/edit_area/edit_area_full.js');
 				$procode = WPShortcodeExecPHP::Get_option(c_scep_option_procode);
 				if (!empty($procode))
 					wp_register_script('scepro', 'http://updates.faircode.eu/scepro?url=' . urlencode(self::Get_url()) . '&code=' .urlencode($procode));
@@ -220,20 +220,6 @@ if (!class_exists('WPShortcodeExecPHP')) {
 			if (!WPShortcodeExecPHP::Get_option(c_scep_option_codeheight))
 				WPShortcodeExecPHP::Update_option(c_scep_option_codeheight, 200);
 
-			if (!WPShortcodeExecPHP::Get_option(c_scep_option_names)) {
-				// Define example shortcode
-				$name = array();
-				$name[] = 'hello_world';
-				WPShortcodeExecPHP::Update_option(c_scep_option_names, $name);
-				WPShortcodeExecPHP::Update_option(c_scep_option_enabled . $name[0], true);
-				WPShortcodeExecPHP::Update_option(c_scep_option_buffer . $name[0], true);
-				WPShortcodeExecPHP::Update_option(c_scep_option_description . $name[0], 'Example');
-				$phpcode = "extract(shortcode_atts(array('arg' => 'default'), \$atts));" . PHP_EOL;
-				$phpcode .= "echo \"Hello world!\" . PHP_EOL;" . PHP_EOL;
-				$phpcode .= "echo \"Arg=\" . \$arg . PHP_EOL;" . PHP_EOL;
-				$phpcode .= "echo \"Content=\" . \$content . PHP_EOL;" . PHP_EOL;
-				WPShortcodeExecPHP::Update_option(c_scep_option_phpcode . $name[0], $phpcode);
-			}
 
 			// Fix spelling mistake
 			if (WPShortcodeExecPHP::Get_option('scep_backtrace_limit')) {
@@ -332,7 +318,7 @@ if (!class_exists('WPShortcodeExecPHP')) {
 				$plugin_page = add_submenu_page(
 					'settings.php',
 					__('Gold Price Live Administration', c_scep_text_domain),
-					__('Shortcode Exec PHP', c_scep_text_domain),
+					__('Gold Price Live', c_scep_text_domain),
 					'manage_network',
 					$this->main_file,
 					array(&$this, 'Administration'));
@@ -437,6 +423,16 @@ if (!class_exists('WPShortcodeExecPHP')) {
 			WPShortcodeExecPHP::Update_option(c_scep_option_deleted, 0);
 			usort($name, 'strcasecmp');
 
+			// Render shortcuts
+			if (count($name)) {
+				echo '<span id="scep_shortcuts">' . __('Go to', c_scep_text_domain);
+				for ($i = 0; $i < count($name); $i++) {
+					echo ($i ? ', ' : ' ');
+					echo '<a href="#' . $name[$i] . '">' . $name[$i] . '</a>';
+				}
+				echo '</span>';
+			}
+
 			// Render info panel
 			$this->Render_info_panel();
 
@@ -493,51 +489,49 @@ if (!class_exists('WPShortcodeExecPHP')) {
 				<tr valign="top"><th scope="row">
 					<label for="scep_option_global"><?php _e('Make shortcodes global', c_scep_text_domain); ?></label>
 				</th><td>
-					<input name="<?php echo c_scep_option_global; ?>" type="checkbox" id="scep_option_global" checked checked<?php echo $scep_global; ?> />
+					<input id="scep_option_global" name="<?php echo c_scep_option_global; ?>" type="checkbox"<?php echo $scep_global; ?> />
 				</td></tr>
 <?php		} ?>
 
 			<tr valign="top"><th scope="row">
-				<label for="scep_option_widget"><?php _e('Allow <b>Gold Price Live</b> in (sidebar) widgets', c_scep_text_domain); ?></label>
+				<label for="scep_option_widget"><?php _e('Allow placement of <b>GoldFeed</b> in widget.', c_scep_text_domain); ?></label>
 			</th><td>
-				<input name="<?php echo c_scep_option_widget; ?>" type="checkbox" id="scep_option_widget" checked checked<?php echo $scep_widget; ?> />
+				<input id="scep_option_widget" name="<?php echo c_scep_option_widget; ?>" type="checkbox"<?php echo $scep_widget; ?> />
 			</td></tr>
 
 			<tr valign="top"><th scope="row">
-				<label for="scep_option_excerpt"><?php _e('Allow <b>Gold Price Live</b> in excerpts', c_scep_text_domain); ?></label>
+				<label for="scep_option_excerpt"><?php _e('Allow placement of <b>GoldFeed</b> in excerpts.', c_scep_text_domain); ?></label>
 			</th><td>
-				<input name="<?php echo c_scep_option_excerpt; ?>" type="checkbox" id="scep_option_excerpt" checked checked<?php echo $scep_excerpt; ?> />
+				<input id="scep_option_excerpt" name="<?php echo c_scep_option_excerpt; ?>" type="checkbox"<?php echo $scep_excerpt; ?> />
 			</td></tr>
 
 			<tr valign="top"><th scope="row">
-				<label for="scep_option_comment"><?php _e('Allow <b>Gold Price Live</b> in comments', c_scep_text_domain); ?></label>
+				<label for="scep_option_comment"><?php _e('Allow placement of <b>GoldFeed</b> in comments.', c_scep_text_domain); ?></label>
 			</th><td>
-				<input name="<?php echo c_scep_option_comment; ?>" type="checkbox" id="scep_option_comment" checked checked<?php echo $scep_comment; ?> />
+				<input id="scep_option_comment" name="<?php echo c_scep_option_comment; ?>" type="checkbox"<?php echo $scep_comment; ?> />
 			</td></tr>
 
 			<tr valign="top"><th scope="row">
-				<label for="scep_option_rss"><?php _e('Allow <b>Gold Price Live</b> in RSS feeds', c_scep_text_domain); ?></label>
+				<label for="scep_option_rss"><?php _e('Allow placement of <b>GoldFeed</b> in RSS feeds.', c_scep_text_domain); ?></label>
 			</th><td>
-				<input name="<?php echo c_scep_option_rss; ?>" type="checkbox" id="scep_option_rss" checked checked<?php echo $scep_rss; ?> />
+				<input id="scep_option_rss" name="<?php echo c_scep_option_rss; ?>" type="checkbox"<?php echo $scep_rss; ?> />
+			</td></tr>
+            
+		  <tr valign="top"><th scope="row">
+				<label for="scep_option_tinymce"><?php _e('Add button to TinyMCE editor', c_scep_text_domain); ?></label>
+			</th><td>
+				<input id="scep_option_tinymce" name="<?php echo c_scep_option_tinymce; ?>" type="checkbox"<?php echo $scep_option_tinymce; ?> />
 			</td></tr>
 			</table>
 
 			<p class="submit">
-				<input type="submit" class="button-primary" value="<?php _e('Update Options', c_scep_text_domain); ?>" />
+				<input type="submit" class="button-primary" value="<?php _e('Save Changes', c_scep_text_domain); ?>" />
 			</p>
 
 			</form>
-			<h3>Gold Price Live Shortcode (<span style="color:#C00; font-weight:bold;">FREE VERSION</span>)</h3>
-<?php
-			// Render shortcode definitions
-			for ($i = 0; $i < count($name); $i++) {
-				$enabled = WPShortcodeExecPHP::Get_option(c_scep_option_enabled . $name[$i]);
-				$buffer = WPShortcodeExecPHP::Get_option(c_scep_option_buffer . $name[$i]);
-				$description = WPShortcodeExecPHP::Get_option(c_scep_option_description . $name[$i]);
-				$code = WPShortcodeExecPHP::Get_option(c_scep_option_phpcode . $name[$i]);
-				$this->Render_shortcode_form($name[$i], $i + 1, $description, $enabled, $buffer, $code);
-			}
-?>
+            
+			<h3>Gold Feed Shortcode</h3>
+
 			<table><tr><td>
 			<form method="post" action="" id="scep-new">
 			<table>
@@ -621,7 +615,7 @@ echo $goldfeed;</textarea></td></tr>
 					action = this.name;
 					entryid = '<?php echo c_scep_form_entry; ?>' + this.form.id;
 					orgname = this.form.name;
-					editid = '<?php echo c_scep_form_phpcode; ?>' + this.form.id;f
+					editid = '<?php echo c_scep_form_phpcode; ?>' + this.form.id;
 					shortcode = $('[name=<?php echo c_scep_form_shortcode; ?>' + this.form.id + ']').val();
 					description = $('[name=<?php echo c_scep_form_description; ?>' + this.form.id + ']').val();
 					enabled = $('[name=<?php echo c_scep_form_enabled; ?>' + this.form.id + ']').attr('checked');
@@ -703,16 +697,50 @@ echo $goldfeed;</textarea></td></tr>
 				$scep_height = 200;
 ?>
 			<a name="<?php echo $name; ?>"></a>
-			
+			<div id="<?php echo c_scep_form_entry . $i; ?>">
+			<table><tr><td>
+			<form method="post" action="" name="<?php echo $name; ?>" id="<?php echo $i; ?>">
+			<table>
+			<tr><td>[<input class="scep_shortcode_name" name="<?php echo c_scep_form_shortcode . $i; ?>" type="text" value="<?php echo $name; ?>">]
+			<span><?php _e('Enabled', c_scep_text_domain); ?></span>
+			<input name="<?php echo c_scep_form_enabled . $i; ?>" type="checkbox" <?php if ($enabled) echo 'checked="checked"'; ?>>
+			<span><?php _e('Output echoed', c_scep_text_domain); ?></span>
+			<input name="<?php echo c_scep_form_buffer . $i; ?>" type="checkbox" <?php if ($buffer) echo 'checked="checked"'; ?>></td></tr>
+			<tr><td><?php _e('Optional description:', c_scep_text_domain); ?><input class="scep_shortcode_description" name="<?php echo c_scep_form_description . $i; ?>" type="text" value="<?php echo $description ?>"></td></tr>
+<?php
+			$params = WPShortcodeExecPHP::Get_option(c_scep_option_param . $name);
+			if ($params) {
+				echo '<tr><td><span class="scep_parameters">' . __('Last attributes:', c_scep_text_domain) . ' ';
+				echo substr(print_r($params, true), 6);
+				echo '</span></td></tr>';
+			}
+?>
+			<tr><td><textarea name="<?php echo c_scep_form_phpcode . $i; ?>" id="<?php echo c_scep_form_phpcode . $i; ?>"
+			style="width: <?php echo $scep_width; ?>px;height: <?php echo $scep_height; ?>px;"><?php echo htmlentities($code, ENT_NOQUOTES, get_option('blog_charset')); ?></textarea></td></tr>
+			<tr><td align="right">
+			<span name="scep_message" class="scep_message"></span>
+			<img src="<?php echo $this->plugin_url  . '/img/ajax-loader.gif'; ?>" alt="wait" name="scep_wait" style="display: none;" />
+			<input type="button" class="button-primary scep-update" name="<?php echo c_scep_action_save; ?>" value="<?php _e('Save', c_scep_text_domain); ?>" />
+			<input type="button" class="button-primary scep-update" name="<?php echo c_scep_action_test; ?>" value="<?php _e('Test', c_scep_text_domain); ?>" />
+			<input type="button" class="button-primary scep-update" name="<?php echo c_scep_action_revert; ?>" value="<?php _e('Revert', c_scep_text_domain); ?>" />
+			<input type="button" class="button-primary scep-update" name="<?php echo c_scep_action_delete; ?>" value="<?php _e('Delete', c_scep_text_domain); ?>" />
+			</td></tr>
+			</table>
+			</form>
+			</td>
+			</tr>
+			</table>
+			<hr />
+			</div>
 <?php
 		}
 
 		function Render_info_panel() {
 ?>
 			<div id="scep_resources_panel">
-			<h3><?php _e('Other Stuff We Offer', c_scep_text_domain); ?></h3>
+			<h3><?php _e('More Stuff', c_scep_text_domain); ?></h3>
 			<ul>
-			<li><a href="https://gold-feed.com/" target="_blank">Custom Gold Payout Charts</a></li>
+			<li><a href="#" target="_blank">Coming soon. Before 11/9/2012</a></li>
 			</ul>
 			</div>
 <?php
@@ -1022,7 +1050,7 @@ echo $goldfeed;</textarea></td></tr>
 ?>
 			<html xmlns="http://www.w3.org/1999/xhtml">
 			<head>
-			<title>Shortcode</title>
+			<title>Gold Feed Live</title>
 			<script language="javascript" type="text/javascript" src="<?php echo site_url(); ?>/wp-includes/js/jquery/jquery.js"></script>
 			<script language="javascript" type="text/javascript" src="<?php echo site_url(); ?>/wp-includes/js/tinymce/tiny_mce_popup.js"></script>
 			<script type='text/javascript'>
