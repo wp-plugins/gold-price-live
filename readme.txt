@@ -8,7 +8,7 @@ Stable tag: 2.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Easily post the spot price of gold on your Wordpress blog using shortcode.
+Easily post the spot price of gold, silver, platinum or Palladium on your Wordpress blog using shortcode.
 
 == Description ==
 
