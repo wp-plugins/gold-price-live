@@ -8,7 +8,7 @@ Stable tag: 2.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Easily post the spot price of gold, silver, platinum or Palladium on your Wordpress blog using shortcode.
+Easily post the spot price of Gold, Silver, Platinum or Palladium on your Wordpress blog using shortcode.
 
 == Description ==
 
@@ -40,7 +40,7 @@ Looking for the paid version of this plugin? Visit www.gold-feed.com
 1. Select Gold Price Live
 1. Choose Your Options and Update
 1. Confirm and Enable
-1. Place [gold_feeder] Shortcode on your Website in Pages, Posts, Widgets and your RSS Feed. You must include the square brackets as well.
+1. Place [gold_feeder], [silver_feeder], [platinum_feeder] or [palladium_feeder] Shortcode on your Website in Pages, Posts, Widgets and your RSS Feed. You must include the square brackets as well.
 
 *Manual*
 
@@ -51,7 +51,7 @@ Looking for the paid version of this plugin? Visit www.gold-feed.com
 1. Select Gold Price Live
 1. Choose Your Options and Update
 1. Confirm and Enable
-1. Place [gold_feeder] Shortcode on your Website in Pages, Posts, Widgets and your RSS Feed. You must include the square brackets as well.
+1. Place [gold_feeder], [silver_feeder], [platinum_feeder] or [palladium_feeder] Shortcode on your Website in Pages, Posts, Widgets and your RSS Feed. You must include the square brackets as well.
 
 == Frequently Asked Questions ==
 
