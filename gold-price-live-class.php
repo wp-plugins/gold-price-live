@@ -177,8 +177,7 @@ if (!class_exists('WPShortcodeExecPHP')) {
 				wp_enqueue_script('jquery');
 				wp_enqueue_script('editarea', $this->plugin_url . '/editarea/edit_area/edit_area_full.js');
 				$procode = WPShortcodeExecPHP::Get_option(c_scep_option_procode);
-				if (!empty($procode))
-					wp_register_script('scepro', 'http://updates.faircode.eu/scepro?url=' . urlencode(self::Get_url()) . '&code=' .urlencode($procode));
+			
 
 				// Enqueue style sheet
 				$css_name = $this->Change_extension(basename($this->main_file), '.css');
@@ -439,7 +438,7 @@ if (!class_exists('WPShortcodeExecPHP')) {
 			echo '<div id="scep_admin_panel">';
 
 			// Render title
-			echo '<h2>' . __('Gold Price Live Administration', c_scep_text_domain) . '</h2>';
+			echo '<h2>' . __('Gold Price Live (FREE VERSION) Administration', c_scep_text_domain) . '</h2>';
 
 			// Render options form
 			echo '<form method="post" action="">';
@@ -484,6 +483,7 @@ if (!class_exists('WPShortcodeExecPHP')) {
 			// Render options
 ?>
 			<h3><?php _e('Options', c_scep_text_domain); ?></h3>
+            <h4 style="color:#cc0000;">Shortcode can be placed on pages, blogs, widgets or your RSS feed.</h4>
 			<table id="scep_option_table" class="form-table">
 <?php		if (WPShortcodeExecPHP::Is_multisite() && function_exists('update_site_option')) { ?>
 				<tr valign="top"><th scope="row">
@@ -516,12 +516,6 @@ if (!class_exists('WPShortcodeExecPHP')) {
 			</th><td>
 				<input id="scep_option_rss" name="<?php echo c_scep_option_rss; ?>" type="checkbox"<?php echo $scep_rss; ?> />
 			</td></tr>
-            
-		  <tr valign="top"><th scope="row">
-				<label for="scep_option_tinymce"><?php _e('Add button to TinyMCE editor', c_scep_text_domain); ?></label>
-			</th><td>
-				<input id="scep_option_tinymce" name="<?php echo c_scep_option_tinymce; ?>" type="checkbox"<?php echo $scep_option_tinymce; ?> />
-			</td></tr>
 			</table>
 
 			<p class="submit">
@@ -530,7 +524,7 @@ if (!class_exists('WPShortcodeExecPHP')) {
 
 			</form>
             
-			<h3>Gold Feed Shortcode</h3>
+			<h3 style="font-weight:normal;">To place the price of gold in a page, post, widget or RSS feed just type <strong>[gold_feeder]</strong> after you save changes, confirm and enable.</h3>
 
 			<table><tr><td>
 			<form method="post" action="" id="scep-new">
@@ -738,10 +732,80 @@ echo $goldfeed;</textarea></td></tr>
 		function Render_info_panel() {
 ?>
 			<div id="scep_resources_panel">
-			<h3><?php _e('More Stuff', c_scep_text_domain); ?></h3>
+			<h3 style="color:#fff;"><?php _e('GET OTHER METALS TOO!', c_scep_text_domain); ?></h3>
+            <p style="font-weight:bold; color:#fff;">Siver, Platinum & Palladium</p>
 			<ul>
-			<li><a href="#" target="_blank">Coming soon. Before 11/9/2012</a></li>
+			<li><span style="color:#eee;">Monthly Access $30</span> <script src="https://static-interlogyllc.netdna-ssl.com/min/g=feedback2" type="text/javascript">
+new JotformFeedback({
+formId:'23194711339959',
+base:'https://jotformpro.com/',
+windowTitle:'Precious Metals Live Plugin Upgrade',
+background:'#FFA500',
+fontColor:'#FFFFFF',
+type:1,
+height:500,
+width:1024
+});
+</script>
+<a class="lightbox-23194711339959" style="cursor:pointer;color:#ffff00;text-decoration:underline;">Subscribe</a></li>
+            <li><span style="color:#eee;">1 Year Access $200</span> <script src="https://static-interlogyllc.netdna-ssl.com/min/g=feedback2" type="text/javascript">
+new JotformFeedback({
+formId:'23195503141950',
+base:'https://jotformpro.com/',
+windowTitle:'Precious Metals Live Plugin Upgrade',
+background:'#FFA500',
+fontColor:'#FFFFFF',
+type:1,
+height:500,
+width:1024
+});
+</script>
+<a class="lightbox-23195503141950" style="cursor:pointer;color:#ffff00;text-decoration:underline;">Subscribe</a></li>
 			</ul>
+            <h4 style="color:#fff;">Weights Available:</h4>
+            <p style="color:#eee;">PER GRAM or PER OUNCE</p>
+            <h4 style="color:#fff;">Currencies Available:</h4>
+            <p style="color:#eee;">AUD BRL CAD CHF EUR GBP INR JPY MXN RMB USD ZAR</p>
+            <h4 style="color:#fff;">How It Works</h4>
+            <p style="color:#eee;">Place shortcode in blogs, pages, widgets and RSS feed as follows:<br><br> [gold_feeder] or [silver_feeder].<br><br> The gold or silver price will be displayed. Style it however you like with the stock Wordpress editor.</p>
+            <h3 style="color:#fff;">PAYOUT CHARTS/TABLES</h3>
+            <p style="font-weight:bold; color:#fff;">Up to 30 Items</p>
+			<ul>
+			<li><span style="color:#eee;">Monthly Access $50</span> <script src="https://static-interlogyllc.netdna-ssl.com/min/g=feedback2" type="text/javascript">
+new JotformFeedback({
+formId:'23195472069964',
+base:'https://jotformpro.com/',
+windowTitle:'Precious Metals Live Plugin Upgrade',
+background:'#FFA500',
+fontColor:'#FFFFFF',
+type:1,
+height:500,
+width:1024
+});
+</script>
+<a class="lightbox-23195472069964" style="cursor:pointer;color:#ffff00;text-decoration:underline;">Subscribe</a></li>
+            <li><span style="color:#eee;">1 Year Access $400</span> <script src="https://static-interlogyllc.netdna-ssl.com/min/g=feedback2" type="text/javascript">
+new JotformFeedback({
+formId:'23195001036946',
+base:'https://jotformpro.com/',
+windowTitle:'Precious Metals Live Plugin Upgrade',
+background:'#FFA500',
+fontColor:'#FFFFFF',
+type:1,
+height:500,
+width:1024
+});
+</script>
+<a class="lightbox-23195001036946" style="cursor:pointer;color:#ffff00;text-decoration:underline;">Subscribe</a></li>
+			</ul>
+            <h4 style="color:#fff;">How It Works</h4>
+            <p style="color:#eee;"><strong>1.</strong> You tell us what items you want on your chart and what your payout rates are for those items as compared to the Kitco Bid price of gold.</p>
+            <p style="color:#eee;"><strong>2.</strong> You tell us the look and feel that you want for your chart or table as best as you can and upload any images or text you want via our web form.</p>
+            <p style="color:#eee;"><strong>3.</strong> Your chart or table is built and sent for you to install in less than 24 hours.</p>
+            <p style="color:#fff;"><strong>THATS IT</strong></p>
+            <h5 style="color:#fff;">Simple example:</h5>
+            <p style="color:#eee;"><img src="https://gold-feed.com/images/example-chart.jpg" width="180" height="262" alt="Customer example."></p>
+            <p style="font-weight:bold; text-align:center; color:#FFFF00;">Never update your payout prices manually ever again!</p>
 			</div>
 <?php
 		}
@@ -1074,6 +1138,7 @@ echo $goldfeed;</textarea></td></tr>
 			</script>
 			</head>
 			<body>
+			<img src="img/example-chart.jpg" width="180" height="262" alt="Customer example chart">			<img src="img/example-chart.jpg" width="180" height="262">
 			<form method="post" action="#" id="scep-tinymce-form">
 			<select id="scep-tinymce-shortcode">
 <?php
