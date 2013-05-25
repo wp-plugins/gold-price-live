@@ -1,71 +1,56 @@
 ﻿=== Gold Price Live ===
 Contributors: GoldPriceLive
-Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=563GXGMGCNLXU
 Tags: gold, price, live, spot, kitco
 Requires at least: 2.0
-Tested up to: 3.4.2
-Stable tag: 2.0
+Tested up to: 3.5.1
+Stable tag: 3.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 Easily post the spot price of Gold, Silver, Platinum or Palladium on your Wordpress blog or website using only very simple shortcode.
 
+Works in Pages, Posts and Widgets!
+
 == Description ==
 
-Using only shortcode you can place the live Kitco price of gold, silver, platinum or palladium on your website in pages, posts, widgets and RSS feed. The gold price output is simple plain text allowing you to easily edit the style and look with the Wordpress WYSIWYG post and page editor. The live gold price output aligned with the Kitco spot gold bid price and is never more than $0.07 per gram different than the published kitco price.
+Using only shortcode you can place the live Kitco spot bid price of gold, silver, platinum or palladium on your website in pages, posts, widgets. The gold price output is simple plain text allowing you to easily edit the style and look with the Wordpress WYSIWYG post and page editor. The live gold price output aligned with the Kitco spot gold bid price and is never more than $0.07 per gram different than the published kitco price.
 
 Advantages over other solutions:
 
-1. You do not have to hire a developer to place Kitco spot gold price on your Wordpress website or blog.
-1. It updates automatically every 1 minute.
-1. There are no costs, backlinks or advertising
-1. Its FREE
+1. You do not have to hire a developer to place actual spot gold price on your Wordpress website or blog.
+1. The prices output are very accurate.
 
 If you have any questions or need help with the plugin please email us at info@gold-feed.com
-
-Looking for the paid version of this plugin? Visit www.gold-feed.com
 
 == Installation ==
 
 *Using the WordPress dashboard*
-
-1. Login to your weblog
-1. Go to Plugins
-1. Select Add New
-1. Search for *Gold Price Live*
-1. Select Install
-1. Select Install Now
-1. Select Activate Plugin
-1. Go to Tools
-1. Select Gold Price Live
-1. Choose Your Options and Update
-1. Confirm and Enable
-1. Place [gold_feeder], [silver_feeder], [platinum_feeder] or [palladium_feeder] Shortcode on your Website in Pages, Posts, Widgets and your RSS Feed. You must include the square brackets as well.
+1. Log into your WordPress as an administrator.
+1. Click on "Plugins" then do a search for "Gold Price Live".
+1. Activate the plugin.
+1. The plugin is now ready to work. Just place shortcode in posts, pages and widgets as follows: [gold], [silver], [platinum] or [palladium]. You must include the square brackets as well.
 
 *Manual*
 
-1. Download and unzip the plugin
-1. Upload the entire gold-price-live/ directory to the /wp-content/plugins/ directory
-1. Activate the plugin through the Plugins menu in WordPress
-1. Go to Tools
-1. Select Gold Price Live
-1. Choose Your Options and Update
-1. Confirm and Enable
-1. Place [gold_feeder], [silver_feeder], [platinum_feeder] or [palladium_feeder] Shortcode on your Website in Pages, Posts, Widgets and your RSS Feed. You must include the square brackets as well.
+1. Download the plugin from this page. (red button on the right)
+1. Login to your weblog administration area.
+1. Click on "Plugins" then "Add New" and then "Upload".
+1. Activate the plugin.
+1. The plugin is now ready to work. Just place shortcode in posts, pages and widgets as follows: [gold], [silver], [platinum] or [palladium]. You must include the square brackets as well.
 
 == Frequently Asked Questions ==
 
 = How do I place the gold, silver, platinum or palladium price on my Wordpress website or blog? =
 
-After following the installation instructions you place this text: [gold_feeder] including the square brackets in pages, posts, widgets or the RSS feed of your Wordpress blog or website. 
+After following the installation instructions you place this text: [gold], [silver], [platinum] or [palladium] including the square brackets in pages, posts, widgets of your Wordpress blog or website. 
 
 = Where can I place the Gold Feed Live shortcode? =
 
-In Pages, Posts, Widgets and RSS Feeds
+In Pages, Posts and Widgets.
 
 = What happens when I disable Gold Feed Live? =
 
-Your settings will be saved. All that happens is your shortcode will now show.
+All that happens is your shortcode will now show not the gold price.
 
 = Who can access the settings and the PHP code? =
 
@@ -81,6 +66,9 @@ Only the administrator of the blog or website.
 
 == Changelog ==
 
+= 3.00 =
+* Made the plugin easier to install and use in general. Added the ability to choose from several different price models.
+
 = 2.00 =
 * Added the ability to place silver, platinum or palladium on your website or blog using shortcode as well.
 
@@ -91,6 +79,9 @@ Only the administrator of the blog or website.
 * Official Gold Price Live plugin release.
 
 == Upgrade Notice ==
+
+= 3.00 =
+Upgrade notice: We have added the ability to easily create payout rates on your site using shortcode such as [gold_999] [gold_998], [gold_997] etc so that you you can place the exact payout prices for your items based on our incredible feed. The plugin has also been made much faster, easier to install as well as use.
 
 = 2.00 =
 Upgrade and you will have the ability to also provide the price of silver, platinum or paladium on your website or blog using shortcode.
