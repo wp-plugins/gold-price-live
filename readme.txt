@@ -25,6 +25,7 @@ If you have any questions or need help with the plugin please email us at info@g
 == Installation ==
 
 *Using the WordPress dashboard*
+
 1. Log into your WordPress as an administrator.
 1. Click on "Plugins" then do a search for "Gold Price Live".
 1. Activate the plugin.
