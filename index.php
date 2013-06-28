@@ -132,7 +132,7 @@ add_action('admin_menu', 'oscimp_admin_actions');
 
 //-------------------
 function get_gold($atts) {
-$a=file_get_contents('http://gold-feed.com/iframe/paid/1f5d5edf5f6re98e8w4d56ew/');
+$a=file_get_contents('http://gold-feed.com/iframe/paid/1f5d5edf5f6re98e8w4d56ew/1f5d5edf5f6re98e8w4d56ewgold.php');
 
 	return $a;
 }
@@ -140,7 +140,7 @@ $a=file_get_contents('http://gold-feed.com/iframe/paid/1f5d5edf5f6re98e8w4d56ew/
  
  //-------------------
 function get_goldfeeder($atts) {
-$a=file_get_contents('http://gold-feed.com/iframe/paid/1f5d5edf5f6re98e8w4d56ew/');
+$a=file_get_contents('http://gold-feed.com/iframe/paid/1f5d5edf5f6re98e8w4d56ew/1f5d5edf5f6re98e8w4d56ewgold.php');
 
 	return $a;
 }
@@ -151,7 +151,7 @@ $a=file_get_contents('http://gold-feed.com/iframe/paid/1f5d5edf5f6re98e8w4d56ew/
 //----------------------------------------
 
 function get_silver($atts) {
-$a=file_get_contents('http://gold-feed.com/iframe/paid/1f5d5edf5f6re98e8w4d56ew/');
+$a=file_get_contents('http://gold-feed.com/iframe/paid/1f5d5edf5f6re98e8w4d56ew/1f5d5edf5f6re98e8w4d56ewsilver.php');
 	return $a;
 }
  add_shortcode('silver', 'get_silver');
@@ -159,7 +159,7 @@ $a=file_get_contents('http://gold-feed.com/iframe/paid/1f5d5edf5f6re98e8w4d56ew/
 
 
 function get_platinum ($atts) {
-$a=file_get_contents('http://gold-feed.com/iframe/paid/1f5d5edf5f6re98e8w4d56ew/');
+$a=file_get_contents('http://gold-feed.com/iframe/paid/1f5d5edf5f6re98e8w4d56ew/1f5d5edf5f6re98e8w4d56ewplatinum.php');
 
 	return $a;
 }
@@ -172,7 +172,7 @@ $a=file_get_contents('http://gold-feed.com/iframe/paid/1f5d5edf5f6re98e8w4d56ew/
 
 
 function get_palladium($atts) {
-$a=file_get_contents('http://gold-feed.com/iframe/paid/1f5d5edf5f6re98e8w4d56ew/');
+$a=file_get_contents('http://gold-feed.com/iframe/paid/1f5d5edf5f6re98e8w4d56ew/1f5d5edf5f6re98e8w4d56ewpalladium.php');
 
 	return $a;
 }
