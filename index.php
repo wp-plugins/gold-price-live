@@ -88,8 +88,7 @@ function oscimp_admin() {
 <input type="hidden" name="cmd" value="_s-xclick">
 <input type="hidden" name="hosted_button_id" value="9Z2WGV9YDKG3A">
 <table>
-<tr><td align="center"><input type="hidden" name="on0" value="Live Pricing Shopping Cart Integration">
-  <strong>Live Pricing Shopping Cart Integration</strong></td></tr><tr><td><select name="os0">
+<tr><td><input type="hidden" name="on0" value="Live Pricing Shopping Cart Integration">Live Pricing Shopping Cart Integration</td></tr><tr><td><select name="os0">
 	<option value="WooCommerce">WooCommerce : $40.00 CAD - monthly</option>
 	<option value="WooCommerce">WooCommerce : $300.00 CAD - yearly</option>
 	<option value="WP E-Commerce">WP E-Commerce : $45.00 CAD - monthly</option>
@@ -102,8 +101,9 @@ function oscimp_admin() {
 </table>
 <input type="hidden" name="currency_code" value="CAD">
 <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_subscribeCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">&nbsp;</p>
-      </form>
+<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form>
+</p>
       <p><strong style="font-size: 15px">YOU WILL RECEIVE YOUR eCOMMERCE PLUGIN UPGRADE IMMEDIATLY AFTER <br>SUCCESSFUL PAYMENT. INSTALLATION INSTRUCTIONS WILL ALSO BE PROVIDED.</strong></p>
       <p><strong>Even inexperienced programers can integrate our real time pricing into their current Wordpress <br>eCommerce plugins in less than 10 minutes. We also provide free support if you have an issue.</strong></p>
       <p>• <span style="font-size: 14px; font-family: 'Gill Sans', 'Gill Sans MT', 'Myriad Pro', 'DejaVu Sans Condensed', Helvetica, Arial, sans-serif; color: #F00;"><em><strong>No re-adding your products. Just enter the weights and karat and off you go! Real time pricing.</strong></em><strong></strong></span></p>
@@ -158,12 +158,13 @@ $a=file_get_contents('http://gold-feed.com/iframe/paid/1f5d5edf5f6re98e8w4d56ew/
 //-----------------------------------------------------
 
 
-function get_platinum ($atts) {
+//-------------------
+function get_platinum($atts) {
 $a=file_get_contents('http://gold-feed.com/iframe/paid/1f5d5edf5f6re98e8w4d56ew/1f5d5edf5f6re98e8w4d56ewplatinum.php');
 
 	return $a;
 }
- add_shortcode('platinum', 'get_platinum ');
+ add_shortcode('platinum', 'get_platinum');
 
 
 
