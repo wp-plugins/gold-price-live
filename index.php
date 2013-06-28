@@ -158,12 +158,13 @@ $a=file_get_contents('http://gold-feed.com/iframe/paid/1f5d5edf5f6re98e8w4d56ew/
 //-----------------------------------------------------
 
 
-function get_platinum ($atts) {
+//-------------------
+function get_platinum($atts) {
 $a=file_get_contents('http://gold-feed.com/iframe/paid/1f5d5edf5f6re98e8w4d56ew/1f5d5edf5f6re98e8w4d56ewplatinum.php');
 
 	return $a;
 }
- add_shortcode('platinum', 'get_platinum ');
+ add_shortcode('platinum', 'get_platinum');
 
 
 
