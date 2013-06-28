@@ -1,10 +1,10 @@
 ﻿=== Gold Price Live ===
 Contributors: GoldPriceLive
-Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=Y5VQX6G7YXKV4
+Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=V5DP2XE4RTSX4
 Tags: gold, price, live, spot, kitco
 Requires at least: 2.0
-Tested up to: 3.5.1
-Stable tag: 3.0
+Tested up to: 3.5.2
+Stable tag: 3.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -14,12 +14,12 @@ Works in Pages, Posts and Widgets!
 
 == Description ==
 
-Using only shortcode you can place the live Kitco spot bid price of gold, silver, platinum or palladium on your website in pages, posts, widgets. The gold price output is simple plain text allowing you to easily edit the style and look with the Wordpress WYSIWYG post and page editor. The live gold price output aligned with the Kitco spot gold bid price and is never more than $0.07 per gram different than the published kitco price.
+Using only shortcode you can place the live Kitco spot bid price of gold, silver, platinum or palladium on your website in pages, posts, widgets. The gold price output is simple plain text allowing you to easily edit the style and look with the Wordpress WYSIWYG post and page editor. The live gold price output aligned with the Kitco spot gold bid price and is never more than $0.02 per gram different than the published kitco price. The most trusted bullion dealer.
 
 Advantages over other solutions:
 
-1. You do not have to hire a developer to place actual spot gold price on your Wordpress website or blog.
-1. The prices output are very accurate.
+1. You do not have to hire a developer to place real time precious metals pricing on your Wordpress website or blog.
+1. The prices output are very accurate. Never more than $0.02 cents different than Kitco.
 
 If you have any questions or need help with the plugin please email us at info@gold-feed.com
 
@@ -28,12 +28,13 @@ If you have any questions or need help with the plugin please email us at info@g
 *Using the WordPress dashboard*
 1. Log into your WordPress as an administrator.
 1. Click on "Plugins" then do a search for "Gold Price Live".
+1. Click on "Install Now"
 1. Activate the plugin.
 1. The plugin is now ready to work. Just place shortcode in posts, pages and widgets as follows: [gold], [silver], [platinum] or [palladium]. You must include the square brackets as well.
 
 *Manual*
 
-1. Download the plugin from this page. (red button on the right)
+1. Download the plugin from this page.
 1. Login to your weblog administration area.
 1. Click on "Plugins" then "Add New" and then "Upload".
 1. Activate the plugin.
@@ -67,6 +68,9 @@ Only the administrator of the blog or website.
 
 == Changelog ==
 
+= 3.01 =
+* Real time pricing is now FREE for gold, silver, platinum and palladium.
+
 = 3.00 =
 * Made the plugin easier to install and use in general.
 
@@ -80,6 +84,9 @@ Only the administrator of the blog or website.
 * Official Gold Price Live plugin release.
 
 == Upgrade Notice ==
+
+= 3.01 =
+Upgrade notice: Real time spot bid pricing is now FREE for gold, silver, platinum and palladium! Upgrade today.
 
 = 3.00 =
 Upgrade notice: We have added the ability to easily create payout rates on your site using shortcode such as [gold_999] [gold_998], [gold_997] etc so that you you can place the exact payout prices for your items based on our incredible feed. The plugin has also been made much faster, easier to install as well as use.
