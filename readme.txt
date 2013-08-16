@@ -26,6 +26,7 @@ If you have any questions or need help with the plugin please email us at info@g
 == Installation ==
 
 *Using the WordPress dashboard*
+
 1. Log into your WordPress as an administrator.
 1. Click on "Plugins" then do a search for "Gold Price Live".
 1. Click on "Install Now"
@@ -67,6 +68,9 @@ Only the administrator of the blog or website.
 1. Gold Price Live
 
 == Changelog ==
+
+= 3.02 =
+* Fixed incorrect pricing for eCommerce plugin upgrade as we have not offered monthly payments for this service for over 3 months. Not sure why this was not updated.
 
 = 3.01 =
 * Real time pricing is now FREE for gold, silver, platinum and palladium.

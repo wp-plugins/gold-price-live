@@ -86,16 +86,12 @@ function oscimp_admin() {
     <td width="61%" align="center" valign="middle"><p><strong><span style="color: #000; font-size: 23px; text-align: center;">DO YOU NEED <u>LIVE</u> PRECIOUS METALS PRICING<BR> FOR YOUR WORDPRESS eCOMMERCE PLUGIN?</span></strong></p>
       <p><form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
 <input type="hidden" name="cmd" value="_s-xclick">
-<input type="hidden" name="hosted_button_id" value="9Z2WGV9YDKG3A">
+<input type="hidden" name="hosted_button_id" value="67VVBHYD3EEBN">
 <table>
 <tr><td><input type="hidden" name="on0" value="Live Pricing Shopping Cart Integration">Live Pricing Shopping Cart Integration</td></tr><tr><td><select name="os0">
-	<option value="WooCommerce">WooCommerce : $40.00 CAD - monthly</option>
 	<option value="WooCommerce">WooCommerce : $300.00 CAD - yearly</option>
-	<option value="WP E-Commerce">WP E-Commerce : $45.00 CAD - monthly</option>
 	<option value="WP E-Commerce">WP E-Commerce : $330.00 CAD - yearly</option>
-	<option value="Cart66">Cart66 : $20.00 CAD - monthly</option>
-	<option value="Cart66">Cart66 : $175.00 CAD - yearly</option>
-	<option value="eShop">eShop : $45.00 CAD - monthly</option>
+	<option value="Cart66">Cart66 : $330.00 CAD - yearly</option>
 	<option value="eShop">eShop : $330.00 CAD - yearly</option>
 </select> </td></tr>
 </table>
@@ -103,8 +99,10 @@ function oscimp_admin() {
 <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_subscribeCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
 <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
 </form>
+
 </p>
-      <p><strong style="font-size: 15px">YOU WILL RECEIVE YOUR eCOMMERCE PLUGIN UPGRADE IMMEDIATLY AFTER <br>SUCCESSFUL PAYMENT. INSTALLATION INSTRUCTIONS WILL ALSO BE PROVIDED.</strong></p>
+      <p><strong style="font-size: 15px">YOU WILL RECEIVE YOUR eCOMMERCE PLUGIN UPGRADE IN LESS THAN 48 HOURS AFTER <br>
+      SUCCESSFUL PAYMENT. INSTALLATION INSTRUCTIONS WILL ALSO BE PROVIDED.</strong></p>
       <p><strong>Even inexperienced programers can integrate our real time pricing into their current Wordpress <br>eCommerce plugins in less than 10 minutes. We also provide free support if you have an issue.</strong></p>
       <p>• <span style="font-size: 14px; font-family: 'Gill Sans', 'Gill Sans MT', 'Myriad Pro', 'DejaVu Sans Condensed', Helvetica, Arial, sans-serif; color: #F00;"><em><strong>No re-adding your products. Just enter the weights and karat and off you go! Real time pricing.</strong></em><strong></strong></span></p>
       <p><strong style="color: #C00; font-size: 15px;">Our API integrates easily with all of the major Wordpress eCommerce plugins.<br>
