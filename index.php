@@ -3,7 +3,7 @@
 Plugin Name: Gold Feed Live
 Plugin URI: http://wordpress.org/extend/plugins/gold-price-live
 Description: Easily place the spot gold, silver, platinum and/or palladium price on your blog or website using shortcode. The price is per troy ounce and is in USD and is available in all currencies. Price output is never more than $0.02 different than the Kitco bid price of gold, silver, platinum and palladium. <strong>All you need to do is install the plugin to your Wordpress, activate the plugin and then use the shortcode [gold], [silver], [platinum] or [palladium]</strong>. Horray! The price will be output! This works in pages, posts and widgets. If you have any questions or require assistance email <a href="mailto:info@gold-feed.com">info@gold-feed.com</a>.
-Version: 3.1
+Version: 3.2
 Author: Gold Feed Inc.
 Author URI: https://gold-feed.com
 */
