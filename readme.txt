@@ -12,7 +12,7 @@ Easily post the spot price of Gold, Silver, Platinum or Palladium on your Wordpr
 
 == Description ==
 
-Using only shortcode you can place the live Kitco spot bid price of gold, silver, platinum or palladium on your website in pages, posts, widgets. The gold price output is simple plain text allowing you to easily edit the style and look with the Wordpress WYSIWYG post and page editor. Our FREE Gold Price Live plugin updates 1 time per hour. If you need real time pricing please visit www.gold-feed.com.
+Using only shortcode you can place the spot price of gold, silver, platinum or palladium on your website in pages, posts, widgets. The gold price output is simple plain text allowing you to easily edit the style and look with the Wordpress WYSIWYG post and page editor. Our FREE Gold Price Live plugin updates 1 time per hour. If you need real time pricing please visit www.gold-feed.com.
 
 Advantages over other solutions:
 
