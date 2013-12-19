@@ -3,7 +3,7 @@
 Plugin Name: Gold Feed Live
 Plugin URI: http://wordpress.org/extend/plugins/gold-price-live
 Description: Easily place the spot gold, silver, platinum and/or palladium price on your blog or website using shortcode. The price is per troy ounce and is in USD and is available in all currencies. This FREE plugin updates metals pricing 2 times per day. Please subscribe at www.gold-feed.com for real time pricing. <strong>All you need to do is install the plugin to your Wordpress, activate the plugin and then use the shortcode [gold], [silver], [platinum] or [palladium]</strong>. Horray! The price will be output! This works in pages, posts and widgets. If you have any questions or require assistance email <a href="mailto:info@gold-feed.com">info@gold-feed.com</a>.
-Version: 3.3
+Version: 4.00
 Author: Gold Feed Inc.
 Author URI: https://gold-feed.com
 */
@@ -48,25 +48,37 @@ function my_plugin_redirect() {
 function oscimp_admin() {
 
     echo "<h2>" . __( 'Gold Price Live', 'oscimp_trdom' ) . "</h2>"; 
-	?>
+	?><style type="text/css">
+<!--
+.style1 {color: #C00}
+.style2 {color: #000099}
+.style3 {
+	color: #000000;
+	font-style: italic;
+	font-weight: bold;
+}
+-->
+</style>
     <hr/>
     <h1 align="center" class="style1 style4"><span>THANK YOU FOR INSTALLING </span></h1>
-<h1 align="center" class="style1"><span  style="color: #C00">(FREE) Gold Feed Live!</span> </h1>
-<p align="center">Our FREE plugin updates precious metals pricing 2 times per day. In the am &amp; pm. </p>
-<p align="center"><em><strong>We also have a <a href="http://gold-feed.com/wordpress-gold-price-live-plugin.php" style="text-decoration:none; ">paid version</a>. See bottom of this page for more info and to subscribe. </strong></em></p>
+<h1 align="center" class="style1"><span  style="color: #C00">(FREE) Gold Price Live!</span></h1>
+<p align="center" class="style2">Brought to you by www.gold-feed.com </p>
+<p align="center">Our FREE plugin updates precious metals pricing <u>1 time per hour</u>. </p>
+<p align="center" class="style3">We also have a paid version. See bottom of this page for more info and to subscribe. </p>
 <h2 align="center"> To add the value of Gold, Silver, Platinum and Palladium just write: </h2>
-<h4 align="center">
-  <pre>[gold], [silver], [platinum] or [palladium]</pre>
-</h4>
+<div align="center" style=" font-weight:bold">[gold_bid], [gold_ask], [gold_high], [gold_low], [gold_dollar_change], [gold_percent_change],<br>
+   [silver_bid], [silver_ask], [silver_high], [silver_low], [silver_dollar_change], [silver_percent_change],<br>
+    [platinum_bid], [platinum_ask], [platinum_high], [platinum_low], [platinum_dollar_change], [platinum_percent_change],<br>
+     [palladium_bid], [palladium_ask], [palladium_high], [palladium_low], [palladium_dollar_change] or [palladium_percent_change]</pre></div>
 <h4 align="center">In any of your Wordpress pages, posts or widgets.</h4>
 <hr>
 <h3 align="center">OUR PAID VERSION FEATURES </h3>
 <p align="center">** Real Time Pricing ** </p>
 <center><div style="width:325px; ">
-  <p>Bid, Ask, High, Low, Dollar Change, Percent Change, 1st London Fix, 2nd London Fix, <a href="http://gold-feed.com/wordpress-gold-price-live-plugin.php" style="text-decoration:none; ">More...</a> </p>
+  <p>Bid, Ask, High, Low, Dollar Change, Percent Change, 1st London Fix, 2nd London Fix</p>
 </div>
 </center>
-<p align="center"><a href="http://gold-feed.com/wordpress-gold-price-live-plugin.php" target="_blank">CLICK HERE TO SUBSCRIBE NOW</a></p>
+<p align="center"><a href="http://gold-feed.com" target="_blank">CLICK HERE TO SUBSCRIBE NOW</a></p>
 <hr>
 
     <?php
@@ -87,54 +99,284 @@ add_options_page('Gold Price Live', 'Gold_Price_Live', 'manage_options', 'Gold_P
 
 add_action('admin_menu', 'oscimp_admin_actions');
 
-//-------------------
-function get_gold($atts) {
-$a=file_get_contents('http://gold-feed.com/iframe/paid/1f5d5edf5f6re98e8w4d56ew/1f5d5edf5f6re98e8w4d56ewgold.php');
+//--------------------------------------------------------------------------------START GOLD
 
-	return $a;
-}
- add_shortcode('gold', 'get_gold');
- 
- //-------------------
-function get_goldfeeder($atts) {
-$a=file_get_contents('http://gold-feed.com/iframe/paid/1f5d5edf5f6re98e8w4d56ew/1f5d5edf5f6re98e8w4d56ewgold.php');
-
-	return $a;
-}
- add_shortcode('gold_feeder', 'get_goldfeeder');
-
-
-
-//----------------------------------------
-
-function get_silver($atts) {
-$a=file_get_contents('http://gold-feed.com/iframe/paid/1f5d5edf5f6re98e8w4d56ew/1f5d5edf5f6re98e8w4d56ewsilver.php');
-	return $a;
-}
- add_shortcode('silver', 'get_silver');
-//-----------------------------------------------------
-
+//--------START GOLD BID------------
 
 //-------------------
-function get_platinum($atts) {
-$a=file_get_contents('http://gold-feed.com/iframe/paid/1f5d5edf5f6re98e8w4d56ew/1f5d5edf5f6re98e8w4d56ewplatinum.php');
+function get_gold_bid($atts) {
+$a=file_get_contents('http://gold-feed.com/free/gold_bid.php');
 
 	return $a;
 }
- add_shortcode('platinum', 'get_platinum');
+ add_shortcode('gold_bid', 'get_gold_bid');
+//-------------------
 
+//--------START GOLD ASK------------
 
-
-//-------------------------------
-
-
-
-function get_palladium($atts) {
-$a=file_get_contents('http://gold-feed.com/iframe/paid/1f5d5edf5f6re98e8w4d56ew/1f5d5edf5f6re98e8w4d56ewpalladium.php');
+//-------------------
+function get_gold_ask($atts) {
+$a=file_get_contents('http://gold-feed.com/free/gold_ask.php');
 
 	return $a;
 }
- add_shortcode('palladium', 'get_palladium');
+ add_shortcode('gold_ask', 'get_gold_ask');
+//-------------------
+
+//--------START GOLD HIGH------------
+
+//-------------------
+function get_gold_high($atts) {
+$a=file_get_contents('http://gold-feed.com/free/gold_high.php');
+
+	return $a;
+}
+ add_shortcode('gold_high', 'get_gold_high');
+//-------------------
+
+//--------START GOLD LOW------------
+
+//-------------------
+function get_gold_low($atts) {
+$a=file_get_contents('http://gold-feed.com/free/gold_low.php');
+
+	return $a;
+}
+ add_shortcode('gold_low', 'get_gold_low');
+//-------------------
+
+//--------START GOLD DOLLAR CHANGE------------
+
+//-------------------
+function get_gold_dollar_change($atts) {
+$a=file_get_contents('http://gold-feed.com/free/gold_dollar_change.php');
+
+	return $a;
+}
+ add_shortcode('gold_dollar_change', 'get_gold_dollar_change');
+//-------------------
+
+//--------START GOLD PERCENT CHANGE------------
+
+//-------------------
+function get_gold_percent_change($atts) {
+$a=file_get_contents('http://gold-feed.com/free/gold_percent_change.php');
+
+	return $a;
+}
+ add_shortcode('gold_percent_change', 'get_gold_percent_change');
+//-------------------
+//--------------------------------------------------------------------------------END GOLD
+
+//--------------------------------------------------------------------------------START silver
+
+//--------START silver BID------------
+
+//-------------------
+function get_silver_bid($atts) {
+$a=file_get_contents('http://gold-feed.com/free/silver_bid.php');
+
+	return $a;
+}
+ add_shortcode('silver_bid', 'get_silver_bid');
+//-------------------
+
+//--------START silver ASK------------
+
+//-------------------
+function get_silver_ask($atts) {
+$a=file_get_contents('http://gold-feed.com/free/silver_ask.php');
+
+	return $a;
+}
+ add_shortcode('silver_ask', 'get_silver_ask');
+//-------------------
+
+//--------START silver HIGH------------
+
+//-------------------
+function get_silver_high($atts) {
+$a=file_get_contents('http://gold-feed.com/free/silver_high.php');
+
+	return $a;
+}
+ add_shortcode('silver_high', 'get_silver_high');
+//-------------------
+
+//--------START silver LOW------------
+
+//-------------------
+function get_silver_low($atts) {
+$a=file_get_contents('http://gold-feed.com/free/silver_low.php');
+
+	return $a;
+}
+ add_shortcode('silver_low', 'get_silver_low');
+//-------------------
+
+//--------START silver DOLLAR CHANGE------------
+
+//-------------------
+function get_silver_dollar_change($atts) {
+$a=file_get_contents('http://gold-feed.com/free/silver_dollar_change.php');
+
+	return $a;
+}
+ add_shortcode('silver_dollar_change', 'get_silver_dollar_change');
+//-------------------
+
+//--------START silver PERCENT CHANGE------------
+
+//-------------------
+function get_silver_percent_change($atts) {
+$a=file_get_contents('http://gold-feed.com/free/silver_percent_change.php');
+
+	return $a;
+}
+ add_shortcode('silver_percent_change', 'get_silver_percent_change');
+//-------------------
+//--------------------------------------------------------------------------------END silver
+
+//--------------------------------------------------------------------------------START platinum
+
+//--------START platinum BID------------
+
+//-------------------
+function get_platinum_bid($atts) {
+$a=file_get_contents('http://gold-feed.com/free/platinum_bid.php');
+
+	return $a;
+}
+ add_shortcode('platinum_bid', 'get_platinum_bid');
+//-------------------
+
+//--------START platinum ASK------------
+
+//-------------------
+function get_platinum_ask($atts) {
+$a=file_get_contents('http://gold-feed.com/free/platinum_ask.php');
+
+	return $a;
+}
+ add_shortcode('platinum_ask', 'get_platinum_ask');
+//-------------------
+
+//--------START platinum HIGH------------
+
+//-------------------
+function get_platinum_high($atts) {
+$a=file_get_contents('http://gold-feed.com/free/platinum_high.php');
+
+	return $a;
+}
+ add_shortcode('platinum_high', 'get_platinum_high');
+//-------------------
+
+//--------START platinum LOW------------
+
+//-------------------
+function get_platinum_low($atts) {
+$a=file_get_contents('http://gold-feed.com/free/platinum_low.php');
+
+	return $a;
+}
+ add_shortcode('platinum_low', 'get_platinum_low');
+//-------------------
+
+//--------START platinum DOLLAR CHANGE------------
+
+//-------------------
+function get_platinum_dollar_change($atts) {
+$a=file_get_contents('http://gold-feed.com/free/platinum_dollar_change.php');
+
+	return $a;
+}
+ add_shortcode('platinum_dollar_change', 'get_platinum_dollar_change');
+//-------------------
+
+//--------START platinum PERCENT CHANGE------------
+
+//-------------------
+function get_platinum_percent_change($atts) {
+$a=file_get_contents('http://gold-feed.com/free/platinum_percent_change.php');
+
+	return $a;
+}
+ add_shortcode('platinum_percent_change', 'get_platinum_percent_change');
+//-------------------
+//--------------------------------------------------------------------------------END platinum
+
+//--------------------------------------------------------------------------------START palladium
+
+//--------START palladium BID------------
+
+//-------------------
+function get_palladium_bid($atts) {
+$a=file_get_contents('http://gold-feed.com/free/palladium_bid.php');
+
+	return $a;
+}
+ add_shortcode('palladium_bid', 'get_palladium_bid');
+//-------------------
+
+//--------START palladium ASK------------
+
+//-------------------
+function get_palladium_ask($atts) {
+$a=file_get_contents('http://gold-feed.com/free/palladium_ask.php');
+
+	return $a;
+}
+ add_shortcode('palladium_ask', 'get_palladium_ask');
+//-------------------
+
+//--------START palladium HIGH------------
+
+//-------------------
+function get_palladium_high($atts) {
+$a=file_get_contents('http://gold-feed.com/free/palladium_high.php');
+
+	return $a;
+}
+ add_shortcode('palladium_high', 'get_palladium_high');
+//-------------------
+
+//--------START palladium LOW------------
+
+//-------------------
+function get_palladium_low($atts) {
+$a=file_get_contents('http://gold-feed.com/free/palladium_low.php');
+
+	return $a;
+}
+ add_shortcode('palladium_low', 'get_palladium_low');
+//-------------------
+
+//--------START palladium DOLLAR CHANGE------------
+
+//-------------------
+function get_palladium_dollar_change($atts) {
+$a=file_get_contents('http://gold-feed.com/free/palladium_dollar_change.php');
+
+	return $a;
+}
+ add_shortcode('palladium_dollar_change', 'get_palladium_dollar_change');
+//-------------------
+
+//--------START palladium PERCENT CHANGE------------
+
+//-------------------
+function get_palladium_percent_change($atts) {
+$a=file_get_contents('http://gold-feed.com/free/palladium_percent_change.php');
+
+	return $a;
+}
+ add_shortcode('palladium_percent_change', 'get_palladium_percent_change');
+//-------------------
+//--------------------------------------------------------------------------------END palladium
+
+
+
 add_filter('widget_text', 'do_shortcode');
 
 ?>

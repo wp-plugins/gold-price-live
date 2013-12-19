@@ -3,8 +3,8 @@ Contributors: GoldPriceLive
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=V5DP2XE4RTSX4
 Tags: gold, price, live, spot, kitco
 Requires at least: 2.0
-Tested up to: 3.7.1
-Stable tag: 3.3
+Tested up to: 3.8
+Stable tag: 4.00
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -29,7 +29,7 @@ If you have any questions or need help with the plugin please email us at info@g
 1. Click on "Plugins" then do a search for "Gold Price Live".
 1. Click on "Install Now".
 1. Activate the plugin.
-1. The plugin is now ready to work. Just place shortcode in posts, pages and widgets as follows: [gold], [silver], [platinum] or [palladium]. You must include the square brackets as well.
+1. The plugin is now ready to work. Just place shortcode in posts, pages and widgets as follows: [gold_bid], [gold_ask], gold_high], [gold_low], [gold_dollar_change], [gold_percent_change], [silver_bid], [silver_ask], silver_high], [silver_low], [silver_dollar_change], [silver_percent_change], [platinum_bid], [platinum_ask], platinum_high], [platinum_low], [platinum_dollar_change], [platinum_percent_change], [palladium_bid], [palladium_ask], palladium_high], [palladium_low], [palladium_dollar_change] or [palladium_percent_change]. You must include the square brackets as well.
 
 *Manual*
 
@@ -37,13 +37,13 @@ If you have any questions or need help with the plugin please email us at info@g
 1. Login to your weblog administration area.
 1. Click on "Plugins" then "Add New" and then "Upload".
 1. Activate the plugin.
-1. The plugin is now ready to work. Just place shortcode in posts, pages and widgets as follows: [gold], [silver], [platinum] or [palladium]. You must include the square brackets as well.
+1. The plugin is now ready to work. Just place shortcode in posts, pages and widgets as follows: [gold_bid], [gold_ask], gold_high], [gold_low], [gold_dollar_change], [gold_percent_change], [silver_bid], [silver_ask], silver_high], [silver_low], [silver_dollar_change], [silver_percent_change], [platinum_bid], [platinum_ask], platinum_high], [platinum_low], [platinum_dollar_change], [platinum_percent_change], [palladium_bid], [palladium_ask], palladium_high], [palladium_low], [palladium_dollar_change] or [palladium_percent_change]. You must include the square brackets as well.
 
 == Frequently Asked Questions ==
 
 = How do I place the gold, silver, platinum or palladium price on my Wordpress website or blog? =
 
-After following the installation instructions you place this text: [gold], [silver], [platinum] or [palladium] including the square brackets in pages, posts, widgets of your Wordpress blog or website. 
+After following the installation instructions you place this text: [gold_bid], [gold_ask], gold_high], [gold_low], [gold_dollar_change], [gold_percent_change], [silver_bid], [silver_ask], silver_high], [silver_low], [silver_dollar_change], [silver_percent_change], [platinum_bid], [platinum_ask], platinum_high], [platinum_low], [platinum_dollar_change], [platinum_percent_change], [palladium_bid], [palladium_ask], palladium_high], [palladium_low], [palladium_dollar_change] or [palladium_percent_change], including the square brackets in pages, posts, widgets of your Wordpress blog or website.
 
 = Where can I place the Gold Feed Live shortcode? =
 
@@ -67,6 +67,9 @@ Only the administrator of the blog or website.
 
 == Changelog ==
 
+= 4.00 =
+* Due to popular demand our plugin now includes all the features of our paid version but only 1 time per hour. Our paid version of this plugin updates in real time. To subscribe visit www.gold-feed.com.
+
 = 3.30 =
 * Our FREE plugin now only updates 2 times per day. Please subscribe at www.gold-feed.com for real time prices as well as bid, ask, high, low, dollar change, percent change, 1st London Fix and 2nd London Fix.
 
@@ -89,6 +92,9 @@ Only the administrator of the blog or website.
 * Official Gold Price Live plugin release.
 
 == Upgrade Notice ==
+
+= 4.00 =
+Upgrade notice: Now includes all the features of our paid version. Prices updated 1 time per hour instead of 2 times per day.
 
 = 3.01 =
 Upgrade notice: Real time spot bid pricing is now FREE for gold, silver, platinum and palladium! Upgrade today.
