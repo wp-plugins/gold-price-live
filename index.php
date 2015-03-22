@@ -3,13 +3,13 @@
 Plugin Name: Gold Feed Live
 Plugin URI: http://wordpress.org/extend/plugins/gold-price-live
 Description: Easily place the spot gold, silver, platinum and/or palladium price on your blog or website using shortcode. The price is per troy ounce and is in USD and is available in all currencies. This FREE plugin updates metals pricing 2 times per day. Please subscribe at www.gold-feed.com for real time pricing. <strong>All you need to do is install the plugin to your Wordpress, activate the plugin and then use the shortcode [gold], [silver], [platinum] or [palladium]</strong>. Horray! The price will be output! This works in pages, posts and widgets. If you have any questions or require assistance email <a href="mailto:info@gold-feed.com">info@gold-feed.com</a>.
-Version: 4.00
+Version: 5.00
 Author: Gold Feed Inc.
 Author URI: https://gold-feed.com
 */
 
 /*
-	Copyright 2013 Gold Feed Inc.
+	Copyright 2015 Gold Feed Inc.
 
 	This program is free software; you can redistribute it and/or modify
 	it under the terms of the GNU General Public License as published by
@@ -57,15 +57,18 @@ function oscimp_admin() {
 	font-style: italic;
 	font-weight: bold;
 }
+.style4 {font-weight: bold}
+.style5 {color: #FF0000}
 -->
 </style>
     <hr/>
     <h1 align="center" class="style1 style4"><span>THANK YOU FOR INSTALLING </span></h1>
 <h1 align="center" class="style1"><span  style="color: #C00">(FREE) Gold Price Live!</span></h1>
 <p align="center" class="style2">Brought to you by www.gold-feed.com </p>
-<p align="center">Our FREE plugin updates precious metals pricing <u>1 time per hour</u>. </p>
-<p align="center" class="style3">We also have a paid version. See bottom of this page for more info and to subscribe. </p>
-<h2 align="center"> To add the value of Gold, Silver, Platinum and Palladium just write: </h2>
+<p align="center">Our FREE plugin updates precious metals pricing <u><strong>1 time per day</strong></u>. </p>
+<p align="center" class="style3">We also have a paid version which updates <span class="style5">EVERY MINUTE!</span> See bottom of this page for more info and to subscribe. </p>
+<h2 align="center"><u>USAGE INSTRUCTIONS</u>  </h2>
+<h2 align="center">To add the value of Gold, Silver, Platinum and Palladium just write: </h2>
 <div align="center" style=" font-weight:bold">[gold_bid], [gold_ask], [gold_high], [gold_low], [gold_dollar_change], [gold_percent_change],<br>
    [silver_bid], [silver_ask], [silver_high], [silver_low], [silver_dollar_change], [silver_percent_change],<br>
     [platinum_bid], [platinum_ask], [platinum_high], [platinum_low], [platinum_dollar_change], [platinum_percent_change],<br>
@@ -73,7 +76,7 @@ function oscimp_admin() {
 <h4 align="center">In any of your Wordpress pages, posts or widgets.</h4>
 <hr>
 <h3 align="center">OUR PAID VERSION FEATURES </h3>
-<p align="center">** Real Time Pricing ** </p>
+<p align="center">** Real Time Pricing Updated Every Minute ** </p>
 <center><div style="width:325px; ">
   <p>Bid, Ask, High, Low, Dollar Change, Percent Change, 1st London Fix, 2nd London Fix</p>
 </div>
@@ -105,7 +108,7 @@ add_action('admin_menu', 'oscimp_admin_actions');
 
 //-------------------
 function get_gold_bid($atts) {
-$a=file_get_contents('http://gold-feed.com/free/gold_bid.php');
+$a=file_get_contents('http://vanseo.ca/freeplugin/gold_bid.php');
 
 	return $a;
 }
@@ -116,7 +119,7 @@ $a=file_get_contents('http://gold-feed.com/free/gold_bid.php');
 
 //-------------------
 function get_gold_ask($atts) {
-$a=file_get_contents('http://gold-feed.com/free/gold_ask.php');
+$a=file_get_contents('http://vanseo.ca/freeplugin/gold_ask.php');
 
 	return $a;
 }
@@ -127,7 +130,7 @@ $a=file_get_contents('http://gold-feed.com/free/gold_ask.php');
 
 //-------------------
 function get_gold_high($atts) {
-$a=file_get_contents('http://gold-feed.com/free/gold_high.php');
+$a=file_get_contents('http://vanseo.ca/freeplugin/gold_high.php');
 
 	return $a;
 }
@@ -138,7 +141,7 @@ $a=file_get_contents('http://gold-feed.com/free/gold_high.php');
 
 //-------------------
 function get_gold_low($atts) {
-$a=file_get_contents('http://gold-feed.com/free/gold_low.php');
+$a=file_get_contents('http://vanseo.ca/freeplugin/gold_low.php');
 
 	return $a;
 }
@@ -149,7 +152,7 @@ $a=file_get_contents('http://gold-feed.com/free/gold_low.php');
 
 //-------------------
 function get_gold_dollar_change($atts) {
-$a=file_get_contents('http://gold-feed.com/free/gold_dollar_change.php');
+$a=file_get_contents('http://vanseo.ca/freeplugin/gold_dollar_change.php');
 
 	return $a;
 }
@@ -160,7 +163,7 @@ $a=file_get_contents('http://gold-feed.com/free/gold_dollar_change.php');
 
 //-------------------
 function get_gold_percent_change($atts) {
-$a=file_get_contents('http://gold-feed.com/free/gold_percent_change.php');
+$a=file_get_contents('http://vanseo.ca/freeplugin/gold_percent_change.php');
 
 	return $a;
 }
@@ -174,7 +177,7 @@ $a=file_get_contents('http://gold-feed.com/free/gold_percent_change.php');
 
 //-------------------
 function get_silver_bid($atts) {
-$a=file_get_contents('http://gold-feed.com/free/silver_bid.php');
+$a=file_get_contents('http://vanseo.ca/freeplugin/silver_bid.php');
 
 	return $a;
 }
@@ -185,7 +188,7 @@ $a=file_get_contents('http://gold-feed.com/free/silver_bid.php');
 
 //-------------------
 function get_silver_ask($atts) {
-$a=file_get_contents('http://gold-feed.com/free/silver_ask.php');
+$a=file_get_contents('http://vanseo.ca/freeplugin/silver_ask.php');
 
 	return $a;
 }
@@ -196,7 +199,7 @@ $a=file_get_contents('http://gold-feed.com/free/silver_ask.php');
 
 //-------------------
 function get_silver_high($atts) {
-$a=file_get_contents('http://gold-feed.com/free/silver_high.php');
+$a=file_get_contents('http://vanseo.ca/freeplugin/silver_high.php');
 
 	return $a;
 }
@@ -207,7 +210,7 @@ $a=file_get_contents('http://gold-feed.com/free/silver_high.php');
 
 //-------------------
 function get_silver_low($atts) {
-$a=file_get_contents('http://gold-feed.com/free/silver_low.php');
+$a=file_get_contents('http://vanseo.ca/freeplugin/silver_low.php');
 
 	return $a;
 }
@@ -218,7 +221,7 @@ $a=file_get_contents('http://gold-feed.com/free/silver_low.php');
 
 //-------------------
 function get_silver_dollar_change($atts) {
-$a=file_get_contents('http://gold-feed.com/free/silver_dollar_change.php');
+$a=file_get_contents('http://vanseo.ca/freeplugin/silver_dollar_change.php');
 
 	return $a;
 }
@@ -229,7 +232,7 @@ $a=file_get_contents('http://gold-feed.com/free/silver_dollar_change.php');
 
 //-------------------
 function get_silver_percent_change($atts) {
-$a=file_get_contents('http://gold-feed.com/free/silver_percent_change.php');
+$a=file_get_contents('http://vanseo.ca/freeplugin/silver_percent_change.php');
 
 	return $a;
 }
@@ -243,7 +246,7 @@ $a=file_get_contents('http://gold-feed.com/free/silver_percent_change.php');
 
 //-------------------
 function get_platinum_bid($atts) {
-$a=file_get_contents('http://gold-feed.com/free/platinum_bid.php');
+$a=file_get_contents('http://vanseo.ca/freeplugin/platinum_bid.php');
 
 	return $a;
 }
@@ -254,7 +257,7 @@ $a=file_get_contents('http://gold-feed.com/free/platinum_bid.php');
 
 //-------------------
 function get_platinum_ask($atts) {
-$a=file_get_contents('http://gold-feed.com/free/platinum_ask.php');
+$a=file_get_contents('http://vanseo.ca/freeplugin/platinum_ask.php');
 
 	return $a;
 }
@@ -265,7 +268,7 @@ $a=file_get_contents('http://gold-feed.com/free/platinum_ask.php');
 
 //-------------------
 function get_platinum_high($atts) {
-$a=file_get_contents('http://gold-feed.com/free/platinum_high.php');
+$a=file_get_contents('http://vanseo.ca/freeplugin/platinum_high.php');
 
 	return $a;
 }
@@ -276,7 +279,7 @@ $a=file_get_contents('http://gold-feed.com/free/platinum_high.php');
 
 //-------------------
 function get_platinum_low($atts) {
-$a=file_get_contents('http://gold-feed.com/free/platinum_low.php');
+$a=file_get_contents('http://vanseo.ca/freeplugin/platinum_low.php');
 
 	return $a;
 }
@@ -287,7 +290,7 @@ $a=file_get_contents('http://gold-feed.com/free/platinum_low.php');
 
 //-------------------
 function get_platinum_dollar_change($atts) {
-$a=file_get_contents('http://gold-feed.com/free/platinum_dollar_change.php');
+$a=file_get_contents('http://vanseo.ca/freeplugin/platinum_dollar_change.php');
 
 	return $a;
 }
@@ -298,7 +301,7 @@ $a=file_get_contents('http://gold-feed.com/free/platinum_dollar_change.php');
 
 //-------------------
 function get_platinum_percent_change($atts) {
-$a=file_get_contents('http://gold-feed.com/free/platinum_percent_change.php');
+$a=file_get_contents('http://vanseo.ca/freeplugin/platinum_percent_change.php');
 
 	return $a;
 }
@@ -312,7 +315,7 @@ $a=file_get_contents('http://gold-feed.com/free/platinum_percent_change.php');
 
 //-------------------
 function get_palladium_bid($atts) {
-$a=file_get_contents('http://gold-feed.com/free/palladium_bid.php');
+$a=file_get_contents('http://vanseo.ca/freeplugin/palladium_bid.php');
 
 	return $a;
 }
@@ -323,7 +326,7 @@ $a=file_get_contents('http://gold-feed.com/free/palladium_bid.php');
 
 //-------------------
 function get_palladium_ask($atts) {
-$a=file_get_contents('http://gold-feed.com/free/palladium_ask.php');
+$a=file_get_contents('http://vanseo.ca/freeplugin/palladium_ask.php');
 
 	return $a;
 }
@@ -334,7 +337,7 @@ $a=file_get_contents('http://gold-feed.com/free/palladium_ask.php');
 
 //-------------------
 function get_palladium_high($atts) {
-$a=file_get_contents('http://gold-feed.com/free/palladium_high.php');
+$a=file_get_contents('http://vanseo.ca/freeplugin/palladium_high.php');
 
 	return $a;
 }
@@ -345,7 +348,7 @@ $a=file_get_contents('http://gold-feed.com/free/palladium_high.php');
 
 //-------------------
 function get_palladium_low($atts) {
-$a=file_get_contents('http://gold-feed.com/free/palladium_low.php');
+$a=file_get_contents('http://vanseo.ca/freeplugin/palladium_low.php');
 
 	return $a;
 }
@@ -356,7 +359,7 @@ $a=file_get_contents('http://gold-feed.com/free/palladium_low.php');
 
 //-------------------
 function get_palladium_dollar_change($atts) {
-$a=file_get_contents('http://gold-feed.com/free/palladium_dollar_change.php');
+$a=file_get_contents('http://vanseo.ca/freeplugin/palladium_dollar_change.php');
 
 	return $a;
 }
@@ -367,7 +370,7 @@ $a=file_get_contents('http://gold-feed.com/free/palladium_dollar_change.php');
 
 //-------------------
 function get_palladium_percent_change($atts) {
-$a=file_get_contents('http://gold-feed.com/free/palladium_percent_change.php');
+$a=file_get_contents('http://vanseo.ca/freeplugin/palladium_percent_change.php');
 
 	return $a;
 }

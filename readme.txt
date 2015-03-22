@@ -3,8 +3,8 @@ Contributors: GoldPriceLive
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=V5DP2XE4RTSX4
 Tags: gold, price, live, spot, kitco
 Requires at least: 2.0
-Tested up to: 3.8
-Stable tag: 4.00
+Tested up to: 4.1.1
+Stable tag: 4.1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -12,12 +12,12 @@ Easily post the spot price of Gold, Silver, Platinum or Palladium on your Wordpr
 
 == Description ==
 
-Using only shortcode you can place the spot price of gold, silver, platinum or palladium on your website in pages, posts, widgets. The gold price output is simple plain text allowing you to easily edit the style and look with the Wordpress WYSIWYG post and page editor. Our FREE Gold Price Live plugin updates 1 time per hour. If you need real time pricing please visit www.gold-feed.com.
+Using only shortcode you can place the spot price of gold, silver, platinum or palladium on your website in pages, posts, widgets. The gold price output is simple plain text allowing you to easily edit the style and look with the Wordpress WYSIWYG post and page editor. Our FREE Gold Price Live plugin updates 1 time per day. If you need real time pricing please visit www.gold-feed.com.
 
 Advantages over other solutions:
 
 1. You do not have to hire a developer to place real time precious metals pricing on your Wordpress website or blog.
-1. The prices output are very accurate. Our free plugin updates pricing 1 time per hour.
+1. The prices output are very accurate. Our free plugin updates pricing 1 time per day.
 
 If you have any questions or need help with the plugin please email us at info@gold-feed.com
 
@@ -67,6 +67,9 @@ Only the administrator of the blog or website.
 
 == Changelog ==
 
+= 5.00 =
+* Our FREE plugin updates 1 time per day at 12PM MST. For up to the minute pricing please use our paid plugin @ www.gold-feed.com.
+
 = 4.00 =
 * Due to popular demand our plugin now includes all the features of our paid version but only 1 time per hour. Our paid version of this plugin updates in real time. To subscribe visit www.gold-feed.com.
 
@@ -92,6 +95,9 @@ Only the administrator of the blog or website.
 * Official Gold Price Live plugin release.
 
 == Upgrade Notice ==
+
+= 5.00 =
+Upgrade notice: Our FREE plugin updates 1 time per day at 12PM MST. For up to the minute pricing please use our paid plugin @ www.gold-feed.com.
 
 = 4.00 =
 Upgrade notice: Now includes all the features of our paid version. Prices updated 1 time per hour instead of 2 times per day.
