@@ -67,6 +67,9 @@ Only the administrator of the blog or website.
 
 == Changelog ==
 
+= 5.01 =
+* Added ability to upgrade to paid live up to the minute pricing. Our FREE plugin updates 1 time per day at 12PM MST. For up to the minute pricing please use our paid plugin @ www.gold-feed.com.
+
 = 5.00 =
 * Our FREE plugin updates 1 time per day at 12PM MST. For up to the minute pricing please use our paid plugin @ www.gold-feed.com.
 
@@ -95,6 +98,9 @@ Only the administrator of the blog or website.
 * Official Gold Price Live plugin release.
 
 == Upgrade Notice ==
+
+= 5.01 =
+Added ability to upgrade to paid live up to the minute pricing. Our FREE plugin updates 1 time per day at 12PM MST. For up to the minute pricing please use our paid plugin @ www.gold-feed.com.
 
 = 5.00 =
 Upgrade notice: Our FREE plugin updates 1 time per day at 12PM MST. For up to the minute pricing please use our paid plugin @ www.gold-feed.com.

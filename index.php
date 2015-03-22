@@ -69,7 +69,7 @@ function oscimp_admin() {
 <p align="center" class="style3">We also have a paid version which updates <span class="style5">EVERY MINUTE!</span> See bottom of this page for more info and to subscribe. </p>
 <h2 align="center"><u>USAGE INSTRUCTIONS</u>  </h2>
 <h2 align="center">To add the value of Gold, Silver, Platinum and Palladium just write: </h2>
-<div align="center" style=" font-weight:bold">[gold_bid], [gold_ask], [gold_high], [gold_low], [gold_dollar_change], [gold_percent_change],<br>
+<div align="center" style=" font-weight:bold; font-size:9px;">[gold_bid], [gold_ask], [gold_high], [gold_low], [gold_dollar_change], [gold_percent_change],<br>
    [silver_bid], [silver_ask], [silver_high], [silver_low], [silver_dollar_change], [silver_percent_change],<br>
     [platinum_bid], [platinum_ask], [platinum_high], [platinum_low], [platinum_dollar_change], [platinum_percent_change],<br>
      [palladium_bid], [palladium_ask], [palladium_high], [palladium_low], [palladium_dollar_change] or [palladium_percent_change]</pre></div>
@@ -80,8 +80,10 @@ function oscimp_admin() {
 <center><div style="width:325px; ">
   <p>Bid, Ask, High, Low, Dollar Change, Percent Change, 1st London Fix, 2nd London Fix</p>
 </div>
+<div style="background-color:#FFFFFF; border:1px solid #ff0000; width:70%;border-top-left-radius: 20px;border-bottom-right-radius: 20px;border-bottom-left-radius: 20px;border-top-right-radius: 20px;"><script type="text/javascript" src="https://secure.jotformpro.com/jsform/50804823354958"></script></div>
+<div align="center" style="margin-top:15px; margin-bottom:15px;">&copy; 2014 Gold Feed Inc. | <a href="http://gold-feed.com" target="_blank">www.gold-feed.com</a> | <a href="mailto:info@gold-feed.com" style="color:#000000;">info@gold-feed.com</a> | <a href="tel:7804780870" style="color:#000000;">780-478-0870</a></div>
 </center>
-<p align="center"><a href="http://gold-feed.com" target="_blank">CLICK HERE TO SUBSCRIBE NOW</a></p>
+
 <hr>
 
     <?php
