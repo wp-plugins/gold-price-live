@@ -8,11 +8,15 @@ Stable tag: 4.1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Easily post the spot price of Gold, Silver, Platinum or Palladium on your Wordpress blog or website using only very simple shortcode. Works in Pages, Posts and Widgets!
+Easily post gold and silver charts as well as the spot price of Gold, Silver, Platinum or Palladium on your Wordpress blog or website using only very simple shortcode. Works in Pages, Posts and Widgets!
 
 == Description ==
 
-Using only shortcode you can place the spot price of gold, silver, platinum or palladium on your website in pages, posts, widgets. The gold price output is simple plain text allowing you to easily edit the style and look with the Wordpress WYSIWYG post and page editor. Our FREE Gold Price Live plugin updates 1 time per day. If you need real time pricing please visit www.gold-feed.com.
+Using only shortcode you can place gold and silver charts as well as the spot price of gold, silver, platinum or palladium on your website in pages, posts, widgets. The gold price output is simple plain text allowing you to easily edit the style and look with the Wordpress WYSIWYG post and page editor. Our FREE Gold Price Live plugin updates 1 time per day. If you need real time pricing please visit www.gold-feed.com.
+
+WANT UP TO THE MINUTE PRICING AND YOUR OWN LOGO ON THE GOLD AND SILVER CHARTS??
+
+In your Wordpress Dashboard go to Settings > Gold_Price_Live and upgrade using the form at the bottom of the page.
 
 Advantages over other solutions:
 
@@ -29,7 +33,7 @@ If you have any questions or need help with the plugin please email us at info@g
 1. Click on "Plugins" then do a search for "Gold Price Live".
 1. Click on "Install Now".
 1. Activate the plugin.
-1. The plugin is now ready to work. Just place shortcode in posts, pages and widgets as follows: [gold_bid], [gold_ask], gold_high], [gold_low], [gold_dollar_change], [gold_percent_change], [silver_bid], [silver_ask], silver_high], [silver_low], [silver_dollar_change], [silver_percent_change], [platinum_bid], [platinum_ask], platinum_high], [platinum_low], [platinum_dollar_change], [platinum_percent_change], [palladium_bid], [palladium_ask], palladium_high], [palladium_low], [palladium_dollar_change] or [palladium_percent_change]. You must include the square brackets as well.
+1. The plugin is now ready to work. Just place shortcode in posts, pages and widgets as follows: [gold_chart], [silver_chart], [gold_bid], [gold_ask], gold_high], [gold_low], [gold_dollar_change], [gold_percent_change], [silver_bid], [silver_ask], silver_high], [silver_low], [silver_dollar_change], [silver_percent_change], [platinum_bid], [platinum_ask], platinum_high], [platinum_low], [platinum_dollar_change], [platinum_percent_change], [palladium_bid], [palladium_ask], palladium_high], [palladium_low], [palladium_dollar_change] or [palladium_percent_change]. You must include the square brackets as well.
 
 *Manual*
 
@@ -37,13 +41,21 @@ If you have any questions or need help with the plugin please email us at info@g
 1. Login to your weblog administration area.
 1. Click on "Plugins" then "Add New" and then "Upload".
 1. Activate the plugin.
-1. The plugin is now ready to work. Just place shortcode in posts, pages and widgets as follows: [gold_bid], [gold_ask], gold_high], [gold_low], [gold_dollar_change], [gold_percent_change], [silver_bid], [silver_ask], silver_high], [silver_low], [silver_dollar_change], [silver_percent_change], [platinum_bid], [platinum_ask], platinum_high], [platinum_low], [platinum_dollar_change], [platinum_percent_change], [palladium_bid], [palladium_ask], palladium_high], [palladium_low], [palladium_dollar_change] or [palladium_percent_change]. You must include the square brackets as well.
+1. The plugin is now ready to work. Just place shortcode in posts, pages and widgets as follows: [gold_chart], [silver_chart], [gold_bid], [gold_ask], gold_high], [gold_low], [gold_dollar_change], [gold_percent_change], [silver_bid], [silver_ask], silver_high], [silver_low], [silver_dollar_change], [silver_percent_change], [platinum_bid], [platinum_ask], platinum_high], [platinum_low], [platinum_dollar_change], [platinum_percent_change], [palladium_bid], [palladium_ask], palladium_high], [palladium_low], [palladium_dollar_change] or [palladium_percent_change]. You must include the square brackets as well.
 
 == Frequently Asked Questions ==
 
+= HOW DO I UPGRADE TO GET UP TO THE MINUTE PRICING AND MY OWN LOGO ON THE CHARTS? =
+
+In your Wordpress Dashboard go to Settings > Gold_Price_Live and upgrade using the form at the bottom of the page.
+
 = How do I place the gold, silver, platinum or palladium price on my Wordpress website or blog? =
 
-After following the installation instructions you place this text: [gold_bid], [gold_ask], gold_high], [gold_low], [gold_dollar_change], [gold_percent_change], [silver_bid], [silver_ask], silver_high], [silver_low], [silver_dollar_change], [silver_percent_change], [platinum_bid], [platinum_ask], platinum_high], [platinum_low], [platinum_dollar_change], [platinum_percent_change], [palladium_bid], [palladium_ask], palladium_high], [palladium_low], [palladium_dollar_change] or [palladium_percent_change], including the square brackets in pages, posts, widgets of your Wordpress blog or website.
+After following the installation instructions you place this text: [gold_chart], [silver_chart], [gold_bid], [gold_ask], gold_high], [gold_low], [gold_dollar_change], [gold_percent_change], [silver_bid], [silver_ask], silver_high], [silver_low], [silver_dollar_change], [silver_percent_change], [platinum_bid], [platinum_ask], platinum_high], [platinum_low], [platinum_dollar_change], [platinum_percent_change], [palladium_bid], [palladium_ask], palladium_high], [palladium_low], [palladium_dollar_change] or [palladium_percent_change], including the square brackets in pages, posts, widgets of your Wordpress blog or website.
+
+= Are the charts responsive? =
+
+Yes.
 
 = Where can I place the Gold Feed Live shortcode? =
 
@@ -63,9 +75,13 @@ Only the administrator of the blog or website.
 
 == Screenshots ==
 
-1. Gold Price Live
+1. Gold Price Live Spot Table
+2. Gold Price Live Charts
 
 == Changelog ==
+
+= 6.00 =
+* Added responsive Gold and Silver charts! To remove branding please use our paid plugin @ www.gold-feed.com.
 
 = 5.01 =
 * Added ability to upgrade to paid live up to the minute pricing. Our FREE plugin updates 1 time per day at 12PM MST. For up to the minute pricing please use our paid plugin @ www.gold-feed.com.
@@ -98,6 +114,9 @@ Only the administrator of the blog or website.
 * Official Gold Price Live plugin release.
 
 == Upgrade Notice ==
+
+= 6.00 =
+Added responsive Gold and Silver charts! To remove branding please use our paid plugin @ www.gold-feed.com.
 
 = 5.01 =
 Added ability to upgrade to paid live up to the minute pricing. Our FREE plugin updates 1 time per day at 12PM MST. For up to the minute pricing please use our paid plugin @ www.gold-feed.com.

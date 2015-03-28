@@ -2,8 +2,8 @@
 /*
 Plugin Name: Gold Feed Live
 Plugin URI: http://wordpress.org/extend/plugins/gold-price-live
-Description: Easily place the spot gold, silver, platinum and/or palladium price on your blog or website using shortcode. The price is per troy ounce and is in USD and is available in all currencies. This FREE plugin updates metals pricing 2 times per day. Please subscribe at www.gold-feed.com for real time pricing. <strong>All you need to do is install the plugin to your Wordpress, activate the plugin and then use the shortcode [gold_bid], [silver_bid], [silver_bid], [palladium_bid] etc...</strong>. Horray! The price will be output! This works in pages, posts and widgets. If you have any questions or require assistance email <a href="mailto:info@gold-feed.com">info@gold-feed.com</a>.
-Version: 5.01
+Description: Easily place the spot gold, silver, platinum and/or palladium price and charts on your blog or website using shortcode. The price is per troy ounce and is in USD and is available in all currencies. This FREE plugin updates metals pricing 2 times per day. Please subscribe at www.gold-feed.com for real time pricing. <strong>All you need to do is install the plugin to your Wordpress, activate the plugin and then use the shortcode [gold_bid], [silver_bid], [silver_bid], [palladium_bid] etc...</strong>. Horray! The price will be output! This works in pages, posts and widgets. If you have any questions or require assistance email <a href="mailto:info@gold-feed.com">info@gold-feed.com</a>.
+Version: 6.00
 Author: Gold Feed Inc.
 Author URI: https://gold-feed.com
 */
@@ -59,6 +59,12 @@ function oscimp_admin() {
 }
 .style4 {font-weight: bold}
 .style5 {color: #FF0000}
+.style6 {color: #CC9900}
+.style7 {
+	color: #006600;
+	font-weight: bold;
+}
+.style8 {color: #000000}
 -->
 </style>
     <hr/>
@@ -66,10 +72,11 @@ function oscimp_admin() {
 <h1 align="center" class="style1"><span  style="color: #C00">(FREE) Gold Price Live!</span></h1>
 <p align="center" class="style2">Brought to you by www.gold-feed.com </p>
 <p align="center">Our FREE plugin updates precious metals pricing <u><strong>1 time per day</strong></u>. </p>
-<p align="center" class="style3">We also have a paid version which updates <span class="style5">EVERY MINUTE!</span> See bottom of this page for more info and to subscribe. </p>
+<p align="center" class="style3">We also have a paid version which updates <span class="style5">EVERY MINUTE!</span> See bottom of this page for more info and to subscribe.</p>
+<p align="center" class="style3 style6">Our paid version also includes your logo on the charts!</p>
 <h2 align="center"><u>USAGE INSTRUCTIONS</u>  </h2>
 <h2 align="center">To add the value of Gold, Silver, Platinum and Palladium just write: </h2>
-<div align="center" style=" font-weight:bold; font-size:9px;">[gold_bid], [gold_ask], [gold_high], [gold_low], [gold_dollar_change], [gold_percent_change],<br>
+<div align="center" style=" font-weight:bold; font-size:9px;">[gold_chart]. [silver_chart], [gold_bid], [gold_ask], [gold_high], [gold_low], [gold_dollar_change], [gold_percent_change],<br>
    [silver_bid], [silver_ask], [silver_high], [silver_low], [silver_dollar_change], [silver_percent_change],<br>
     [platinum_bid], [platinum_ask], [platinum_high], [platinum_low], [platinum_dollar_change], [platinum_percent_change],<br>
      [palladium_bid], [palladium_ask], [palladium_high], [palladium_low], [palladium_dollar_change] or [palladium_percent_change]</pre></div>
@@ -103,6 +110,28 @@ add_options_page('Gold Price Live', 'Gold_Price_Live', 'manage_options', 'Gold_P
 
 
 add_action('admin_menu', 'oscimp_admin_actions');
+
+//--------START GOLD CHART------------
+
+//-------------------
+function get_gold_chart($atts) {
+$a=file_get_contents('http://gold-feed.com/charts/plugin3823832/goldchart.php');
+
+	return $a;
+}
+ add_shortcode('gold_chart', 'get_gold_chart');
+//-------------------
+
+//--------START GOLD CHART------------
+
+//-------------------
+function get_silver_chart($atts) {
+$a=file_get_contents('http://gold-feed.com/charts/plugin3823832/silverchart.php');
+
+	return $a;
+}
+ add_shortcode('silver_chart', 'get_silver_chart');
+//-------------------
 
 //--------------------------------------------------------------------------------START GOLD
 
